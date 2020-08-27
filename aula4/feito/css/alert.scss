@@ -1,0 +1,73 @@
+$theme_mode: "light";
+
+$darkPercent: 80%;
+
+$borderPercent: 15%;
+
+// Maps
+$colors_light: (
+    "primary": #d9e9ea,
+    "secondary": #e6d3db,
+    "danger": #f4cbcb,
+    "warning": #fff3cd
+);
+
+$colors_darken: (
+    "primary": darken(#d9e9ea, $darkPercent),
+    "secondary": darken(#e6d3db, $darkPercent),
+    "danger": darken(#f4cbcb, $darkPercent),
+    "warning": darken(#fff3cd, $darkPercent)
+);
+
+$colors_border: (
+    "primary": darken(#d9e9ea, $borderPercent),
+    "secondary": darken(#e6d3db, $borderPercent),
+    "danger": darken(#f4cbcb, $borderPercent),
+    "warning": darken(#fff3cd, $borderPercent)
+);
+
+@function colorLight($mode) {
+    @return map-get($colors_light, $mode);
+}
+
+@function colorDarken($mode) {
+    @return map-get($colors_darken, $mode);
+}
+
+@function colorBorder($mode) {
+    @return map-get($colors_border, $mode);
+}
+
+// List
+$colors_mode: ("primary", "secondary", "danger", "warning");
+
+@mixin alert-base($color_type) {
+    background-color: colorLight($color_type);
+    color: colorDarken($color_type);
+    border: 1px solid colorBorder($color_type);  
+    strong {
+        color: darken(colorLight($color_type), 55%)
+    }  
+}
+
+body {
+    @if $theme_mode == "dark" {
+        background-color: #1b1f2d;
+    }
+}
+
+div {
+    .alert {
+        position: relative;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+
+        @each $mode in $colors_mode {
+            &-#{$mode} {
+                @include alert-base($mode);
+            }
+        }
+    }
+}

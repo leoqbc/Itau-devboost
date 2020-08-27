@@ -1,0 +1,30 @@
+div .alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem; }
+  div .alert-primary {
+    background-color: #d9e9ea;
+    color: #0f1b1c;
+    border: 1px solid #a8cccf; }
+    div .alert-primary strong {
+      color: #3d6b6e; }
+  div .alert-secondary {
+    background-color: #e6d3db;
+    color: #150c10;
+    border: 1px solid #caa2b3; }
+    div .alert-secondary strong {
+      color: #663a4d; }
+  div .alert-danger {
+    background-color: #f4cbcb;
+    color: #200707;
+    border: 1px solid #e78c8c; }
+    div .alert-danger strong {
+      color: #891d1d; }
+  div .alert-warning {
+    background-color: #fff3cd;
+    color: #342800;
+    border: 1px solid #ffe181; }
+    div .alert-warning strong {
+      color: #b48800; }

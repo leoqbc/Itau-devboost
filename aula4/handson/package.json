@@ -1,0 +1,15 @@
+{
+  "name": "handson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:compile": "node-sass ./css/alert.scss ./css/alert.css",
+    "sass:compile-dark": "node-sass ./css/alert.scss ./css/alert-dark.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
