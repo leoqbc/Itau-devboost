@@ -1,0 +1,10 @@
+.meu-componente ul {
+    list-style: none;
+}
+
+.meu-componente li {
+    width: 250px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 1px 1px 20px #CCC ;
+}
