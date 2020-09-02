@@ -12,7 +12,11 @@ export default class NameList extends Component {
         <>
             <h1>{this.props.children}</h1>
             <ul>
-                {this.props.names.map((value, index) => <li key={index}>{value}</li>)}
+                {this.props.names.map((value, index) => 
+                    <li key={index}>{value} 
+                        <button onClick={() => this.props.removeName(index)}>remover</button>
+                    </li>
+                )}
             </ul>
         </>
         );
