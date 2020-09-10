@@ -1,8 +1,13 @@
 <h2>Teste 123</h2>
+<div>
+  <form [formGroup]="form">
+    <input type="text" formControlName="title">
+    <button (click)="addTodo()">Cadastrar atividade</button>
+  </form>
+</div>
 <ul>
   <li *ngFor="let todo of todos" (click)="toggleCompleted(todo)">
     <input type="checkbox" [checked]="todo.completed">
     {{ todo.title }}
   </li>
-  <button (click)="addTodo()">Add tarefa</button>
 </ul>
