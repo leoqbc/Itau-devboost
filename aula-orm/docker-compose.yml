@@ -1,0 +1,20 @@
+version: "3.0"
+services: 
+    node:
+        build: ./docker
+        working_dir: /app
+        container_name: typeorm
+        volumes:
+            - ./app:/app
+        ports:
+            - 80:2000
+        environment: 
+            - PORT=2000
+        tty: true
+    mysql:
+        image: mariadb:10.4.14
+        ports:
+            - 3306:3306
+        environment: 
+            - MYSQL_ROOT_PASSWORD=123456
+            - MYSQL_DATABASE=tarefas

@@ -1,0 +1,6 @@
+ - Criar os repositories usando o TypeORM para criar e mapear as tabelas no mysql, e criar o CRUD dos dados
+
+1. Criar as tabelas mapeando as classes(repository)
+2. Testar a conexão com o banco
+3. Criar a comunicação API usando Express com TS
+4. Testar as rotas (postman)
