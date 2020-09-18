@@ -1,0 +1,25 @@
+Aula CI/CD:
+
+    config servidor:
+        criar uma maquina virtual
+        liberar porta 80
+        salvar uma chave privada
+        definir um IP estático
+        acessar o servidor
+        atualizar servidor
+        instalar NGINX
+
+
+    config jenkins:
+        Cadastrar com docker
+        Registrar repositório do GIT
+        Adicionar chave privada na config
+        Instalar plugin ssh publisher
+        Instalar plugin nodejs
+        Configurar o deploy
+
+        yarn && yarn test --watchAll=false --testFailureExitCode=1 && yarn build
+
+        ssh
+        build/**
+        sudo cp -R ./build/** /var/www/html
